@@ -1,0 +1,36 @@
+.nav-bar-icons {
+	&__wrapper {
+		margin-top: 30px !important;
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		column-gap: 30px;
+		&__item {
+			list-style-type: none;
+			height: 104px;
+			background: #fff;
+			border-radius: 12px;
+			border: 1px solid #F0F0F0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: 0.2s all;
+			&:first-child {
+				color: rgba(226, 53, 53, 1);
+			}
+			&:hover {
+				cursor: pointer;
+				background: rgba($color: #FF7010, $alpha: 0.2);
+				transition: 0.2s all;
+			}
+			&__desc {
+				margin-top: 8px;
+				font-size: 18px;
+				line-height: 24px;
+				font-weight: 400;
+			}
+		}
+	}
+}
