@@ -1,3 +1,5 @@
+@import '../../../scss/variables.scss';
+
 .nav-bar-icons {
 	&__wrapper {
 		margin-top: 30px !important;
@@ -11,18 +13,18 @@
 			height: 104px;
 			background: #fff;
 			border-radius: 12px;
-			border: 1px solid #F0F0F0;
+			border: 1px solid $grey;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			transition: 0.2s all;
 			&:first-child {
-				color: rgba(226, 53, 53, 1);
+				color: $red;
 			}
 			&:hover {
 				cursor: pointer;
-				background: rgba($color: #FF7010, $alpha: 0.2);
+				background: rgba($orange-color, 0.2);
 				transition: 0.2s all;
 			}
 			&__desc {

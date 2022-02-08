@@ -15,6 +15,22 @@ app.use('/', express.static(__dirname));
 
 app.use(AppRouter.getInstance());
 
-app.listen(3300, () => {
-    console.log('Listening on port 3300')
-})
+function start() {
+	try {
+		mongoose.connect('mongodb+srv://tort:<19990131pavlik>@cluster0.8ymh6.mongodb.net/Cluster0?retryWrites=true&w=majority', {
+			dbName: 'Cluster0',
+			user: 'tort',
+			pass: '19990131pavlik'
+		})
+		
+		app.listen(3300, () => {
+			console.log('Listening on port 3300')
+		})
+	} catch(e) {
+		console.log(e)
+	}
+}
+
+start();
+
+

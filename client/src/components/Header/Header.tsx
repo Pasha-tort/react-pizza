@@ -8,9 +8,12 @@ export const Header: FC = () => {
 	return (
 		<>
 			<header className='header'>
-				<HeaderInfo/>
-				<div className='header__line'></div>
-				<HeaderMenu/>
+				<div className='header__wrapper'>
+					<HeaderInfo/>
+				</div>
+				<div className='header__wrapper'>
+					<HeaderMenu/>
+				</div>
 			</header>
 
 			<NavBarIcons/>

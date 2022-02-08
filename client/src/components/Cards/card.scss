@@ -1,0 +1,50 @@
+@import '../../scss/variables.scss';
+
+$border-radius: 12px;
+
+.card {
+	list-style-type: none;
+	width: 100%;
+	min-height: 480px;
+	border-radius: $border-radius;
+	border: 1px solid $grey;
+	background: #fff;
+	&__img {
+		display: block;
+		margin: 0 auto;
+		border-radius: $border-radius;
+		width: 95%;
+	}
+	&__desc {
+		padding: 20px;
+	}
+	&__composition {
+		display: block;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 400;
+		margin-top: 12px;
+	}
+	&__product-name {
+		display: block;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 600;
+	}
+	&__footer {
+		margin-top: 16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__btn {
+		width: 131px;
+		height: 48px;
+	}
+	&__price {
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 600;
+		color: $orange-color;
+	}
+}

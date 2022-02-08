@@ -1,7 +1,9 @@
+@import '../../../scss/variables.scss';
+
 .header-menu {
 	display: grid;
 	grid-template-columns: 141px 1fr 89px;
-	height: 64px;
+	min-height: 64px;
 	align-items: center;
 	&__logo-wrapper {
 		display: flex;
@@ -20,7 +22,7 @@
 		height: 40px;
 		min-width: 89px;
 		border: 0px;
-		background: #FF7010;
+		background: $orange-color;
 		border-radius: 4px;
 		font-size: 16px;
 		font-weight: 400;
@@ -38,5 +40,10 @@
 			background: #000;
 			transition: 0.2s all;
 		}
+	}
+	&__btn-admin {
+		margin-bottom: 10px;
+		font-size: 14px !important;
+		line-height: 18px !important;
 	}
 }

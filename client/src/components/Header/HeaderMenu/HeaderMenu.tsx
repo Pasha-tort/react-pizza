@@ -8,6 +8,11 @@ import logo from '../../../assets/icons/logo.svg'
 import cartBtnIcon from '../../../assets/icons/cartBtnIcon.svg';
 
 export const HeaderMenu: FC = () => {
+
+	const handlerClick = () => {
+		
+	}
+
 	return(
 		<div className='container'>
 			<div className='header-menu'>
@@ -19,6 +24,9 @@ export const HeaderMenu: FC = () => {
 				<div className='header-menu__empty-nav'></div>
 
 				<div className='header-menu__cart-btn-wrapper'>
+					<button onClick={handlerClick} className='btn btn_orange header-menu__btn-admin'>
+						Открыть админ. панель
+					</button>
 					<button className='header-menu__cart-btn'>
 						<img className='header-menu__cart-btn__icon' src={cartBtnIcon} alt="cart"/>
 						<span className='header-menu__cart-btn__count'>0</span>

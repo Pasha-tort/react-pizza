@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.btn {
+	border-radius: 6px;
+	cursor: pointer;
+	transition: 0.2s all;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 400;
+	&_orange {
+		background: $orange-color;
+		color: #fff;
+		border: 1px solid $orange-color;
+		&:hover {
+			background: #fff;
+			color: $orange-color;
+		}
+	}
+	&_white {
+		background: #fff;
+		border: 1px solid $grey;
+	}
+}

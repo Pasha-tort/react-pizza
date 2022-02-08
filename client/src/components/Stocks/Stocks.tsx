@@ -7,6 +7,7 @@ import stocks1 from '../../assets/img/stocks/stocks1.jpg';
 import './stocks.scss';
 
 export const Stocks: FC = () => {
+
 	return (
 		<div className='stocks__wrapper'>
 			<div className='container'>
