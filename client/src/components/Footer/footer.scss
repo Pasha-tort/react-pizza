@@ -1,0 +1,43 @@
+.footer {
+	&__section {
+		margin-top: 60px;
+		background: #fff;
+		padding: 32px;
+	}
+	&__logo-wrapper {
+		display: flex;
+		align-items: center;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__logo {
+		margin-right: 12px;
+	}
+	&__company-name {
+		font-size: 16px;
+	}
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	&__title {
+		font-size: 20px;
+		line-height: 28px;
+		font-weight: 600;
+	}
+	&__list {
+		&__item {
+			list-style-type: none;
+			font-size: 16px;
+			line-height: 22px;
+			font-weight: 400;
+			margin-top: 20px;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}

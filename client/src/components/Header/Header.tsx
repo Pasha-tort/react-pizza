@@ -9,14 +9,14 @@ export const Header: FC = () => {
 		<>
 			<header className='header'>
 				<div className='header__wrapper'>
-					<HeaderInfo/>
+					<HeaderInfo />
 				</div>
 				<div className='header__wrapper'>
-					<HeaderMenu/>
+					<HeaderMenu />
 				</div>
 			</header>
 
-			<NavBarIcons/>
+			<NavBarIcons />
 		</>
 	)
 }
