@@ -23,9 +23,6 @@ function App() {
 				<Route path="/" element={<LoyoutMain />}>
 					<Route path="/" element={<HomePage />} />
 					<Route path="*" element={<NotfoundPage />} />
-				</Route>
-
-				<Route path="/" element={<LoyoutProduct />}>
 					<Route path="pizza" element={<ProductPage typeProduct={TypeSectionProduct.pizza} />} />
 					<Route path="rolls" element={<ProductPage typeProduct={TypeSectionProduct.rolls} />} />
 					<Route path="snacks" element={<ProductPage typeProduct={TypeSectionProduct.snacks} />} />
@@ -33,6 +30,10 @@ function App() {
 					<Route path="drinks" element={<ProductPage typeProduct={TypeSectionProduct.drinks} />} />
 					<Route path="saucess" element={<ProductPage typeProduct={TypeSectionProduct.saucess} />} />
 				</Route>
+
+				{/* <Route path="/" element={<LoyoutProduct />}>
+					
+				</Route> */}
 			</Routes>
 			<Footer />
 		</>

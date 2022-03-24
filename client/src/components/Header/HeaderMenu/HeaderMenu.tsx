@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { NavLink } from 'react-router-dom';
 
 //components
 import { NavBarMenu } from './NavBarMenu';
@@ -10,28 +11,23 @@ import './header-menu.scss';
 import logo from '../../../assets/icons/logo.svg'
 import cartBtnIcon from '../../../assets/icons/cartBtnIcon.svg';
 
-type PropsHeaderMenu = {
-	checkHeaderMenu?: boolean;
-}
+export const HeaderMenu: FC = () => {
 
-export const HeaderMenu: FC<PropsHeaderMenu> = ({ checkHeaderMenu }) => {
-
-	const onHandlerClick = () => {
-
-	}
+	const isActiveClassName = ({ isActive }: { isActive: boolean }) => isActive ? 'header-menu__logo-wrapper header-menu__list__item header-menu__list__item_active' : 'header-menu__logo-wrapper header-menu__list__item';
 
 	return (
 		<div className='container'>
 			<div className='header-menu'>
-				<div className='header-menu__logo-wrapper'>
+				<NavLink to='/' className={isActiveClassName}>
 					<img className='header-menu__logo' src={logo} alt='logo' />
 					<span className='header-menu__company-name'>React Pizza</span>
-				</div>
+				</NavLink>
 
 				<div className='header-menu__wrapper'>
-					{
+					{/* {
 						checkHeaderMenu ? <NavBarMenu /> : null
-					}
+					} */}
+					<NavBarMenu />
 				</div>
 
 				<div className='header-menu__cart-btn-wrapper'>

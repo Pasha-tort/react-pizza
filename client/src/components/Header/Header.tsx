@@ -16,7 +16,7 @@ export const Header: FC = () => {
 				</div>
 			</header>
 
-			<NavBarIcons />
+			{/* <NavBarIcons /> */}
 		</>
 	)
 }

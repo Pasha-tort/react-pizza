@@ -8,7 +8,7 @@ export const HeaderPages: FC = () => {
 	return (
 		<header className='header'>
 			<div className='header__wrapper'>
-				<HeaderMenu checkHeaderMenu={true} />
+				<HeaderMenu />
 			</div>
 		</header>
 	)

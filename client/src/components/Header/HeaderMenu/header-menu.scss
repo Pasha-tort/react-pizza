@@ -44,14 +44,22 @@
 	&__list {
 		display: flex;
 		justify-content: flex-start;
-		&__item {
+		li {
 			list-style-type: none;
 			margin-left: 32px;
+			&:first-child {
+				margin-left: 64px;
+			}
+		}
+		&__item {
+			list-style-type: none;
 			font-size: 16px;
 			line-height: 22px;
 			font-weight: 400;
-			&:first-child {
-				margin-left: 64px;
+			text-decoration: none;
+			color: #000;
+			&_active {
+				color: $orange-color;
 			}
 			&:hover {
 				cursor: pointer;

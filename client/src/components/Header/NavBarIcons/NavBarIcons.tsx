@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 //img & icons
 import {
@@ -17,10 +18,6 @@ import './nav-bar-icons.scss';
 
 export const NavBarIcons: FC = () => {
 
-	const onHandlerClick = () => {
-
-	}
-
 	return (
 		<>
 			<div className='container nav-bar-icons'>
@@ -30,34 +27,34 @@ export const NavBarIcons: FC = () => {
 							<img className='nav-bar-icons__list__item__icon' src={stocks} alt="nav_icon" />
 							<span className='nav-bar-icons__list__item__desc'>Акции</span>
 						</li>
-						<li className='nav-bar-icons__list__item'>
+						<Link to='/pizza' className='nav-bar-icons__list__item'>
 							<img className='nav-bar-icons__list__item__icon' src={pizza} alt="nav_icon" />
 							<span className='nav-bar-icons__list__item__desc'>Пицца</span>
-						</li>
-						<li className='nav-bar-icons__list__item'>
+						</Link>
+						<Link to="/rolls" className='nav-bar-icons__list__item'>
 							<img className='nav-bar-icons__list__item__icon' src={sushi} alt="nav_icon" />
-							<span className='nav-bar-icons__list__item__desc'>Суши</span>
-						</li>
-						<li className='nav-bar-icons__list__item'>
+							<span className='nav-bar-icons__list__item__desc'>Роллы</span>
+						</Link>
+						<Link to="/drinks" className='nav-bar-icons__list__item'>
 							<img className='nav-bar-icons__list__item__icon' src={drinks} alt="nav_icon" />
 							<span className='nav-bar-icons__list__item__desc'>Напитки</span>
-						</li>
-						<li className='nav-bar-icons__list__item'>
+						</Link>
+						<Link to="/snacks" className='nav-bar-icons__list__item'>
 							<img className='nav-bar-icons__list__item__icon' src={snacks} alt="nav_icon" />
 							<span className='nav-bar-icons__list__item__desc'>Закуски</span>
-						</li>
+						</Link>
 						<li className='nav-bar-icons__list__item'>
 							<img className='nav-bar-icons__list__item__icon' src={combo} alt="nav_icon" />
 							<span className='nav-bar-icons__list__item__desc'>Комбо</span>
 						</li>
-						<li className='nav-bar-icons__list__item'>
+						<Link to="/desserts" className='nav-bar-icons__list__item'>
 							<img className='nav-bar-icons__list__item__icon' src={desserts} alt="nav_icon" />
 							<span className='nav-bar-icons__list__item__desc'>Десерты</span>
-						</li>
-						<li className='nav-bar-icons__list__item'>
+						</Link>
+						<Link to="/saucess" className='nav-bar-icons__list__item'>
 							<img className='nav-bar-icons__list__item__icon' src={sauces} alt="nav_icon" />
 							<span className='nav-bar-icons__list__item__desc'>Соусы</span>
-						</li>
+						</Link>
 					</ul>
 				</nav>
 			</div>

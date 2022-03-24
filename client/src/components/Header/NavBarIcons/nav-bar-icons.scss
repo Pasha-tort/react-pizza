@@ -19,6 +19,8 @@
 			justify-content: center;
 			align-items: center;
 			transition: 0.2s all;
+			text-decoration: none;
+			color: #000;
 			&:first-child {
 				color: $red;
 			}
@@ -32,6 +34,7 @@
 				font-size: 18px;
 				line-height: 24px;
 				font-weight: 400;
+				text-decoration: none;
 			}
 		}
 	}
