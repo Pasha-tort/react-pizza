@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //img & icons
 import logo from '../../assets/icons/logo.svg';
@@ -12,10 +13,10 @@ export const Footer = () => {
 		<footer className='footer__section'>
 			<div className='container'>
 				<div className='footer__wrapper'>
-					<div className='footer__logo-wrapper'>
+					<Link to="/" className='footer__logo-wrapper'>
 						<img className='footer__logo' src={logo} alt='logo' />
 						<span className='footer__company-name'>React Pizza</span>
-					</div>
+					</Link>
 
 					<div className='footer__about'>
 						<span className='footer__title'>

@@ -1,22 +1,20 @@
 import React, { FC } from 'react';
 
-import { HeaderInfo, HeaderMenu, NavBarIcons } from './';
+import { HeaderInfo, HeaderMenu } from './';
 
 import './header.scss';
 
 export const Header: FC = () => {
 	return (
 		<>
-			<header className='header'>
+			<header>
 				<div className='header__wrapper'>
 					<HeaderInfo />
 				</div>
-				<div className='header__wrapper'>
-					<HeaderMenu />
-				</div>
 			</header>
-
-			{/* <NavBarIcons /> */}
+			<div className='header__wrapper header__wrapper_sticky'>
+				<HeaderMenu />
+			</div>
 		</>
 	)
 }

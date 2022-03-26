@@ -1,5 +1,4 @@
-import React from 'react';
-import { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 
 //components
 import { SectionProducts } from '../components/SectionProducts';
@@ -13,9 +12,23 @@ type PropsProductPage = {
 
 export const ProductPage: FC<PropsProductPage> = ({ typeProduct }) => {
 
-	return (
-		<>
-			<SectionProducts typeProduct={typeProduct} />
-		</>
-	)
+	useEffect(() => {
+
+	}, [typeProduct]);
+
+	if (typeProduct === 'pizza' || typeProduct === 'rolls') {
+		return (
+			<>
+				<SectionProducts typeProduct={typeProduct} />
+			</>
+		)
+	} else {
+		return (
+			<>
+				<SectionProducts typeProduct={typeProduct} filters={false} />
+			</>
+		)
+	}
+
+
 }

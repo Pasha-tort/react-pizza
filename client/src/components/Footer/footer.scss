@@ -1,3 +1,5 @@
+@import '../../scss/variables.scss';
+
 .footer {
 	&__section {
 		margin-top: 60px;
@@ -7,6 +9,8 @@
 	&__logo-wrapper {
 		display: flex;
 		align-items: center;
+		color: #000;
+		text-decoration: none;
 		&:hover {
 			cursor: pointer;
 		}
@@ -35,8 +39,11 @@
 			line-height: 22px;
 			font-weight: 400;
 			margin-top: 20px;
+			transition: 0.1s all;
 			&:hover {
 				cursor: pointer;
+				color: $orange-color;
+				transition: 0.1s all;
 			}
 		}
 	}

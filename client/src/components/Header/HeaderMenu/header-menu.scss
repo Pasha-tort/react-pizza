@@ -58,11 +58,14 @@
 			font-weight: 400;
 			text-decoration: none;
 			color: #000;
+			transition: 0.1s all;
 			&_active {
 				color: $orange-color;
 			}
 			&:hover {
 				cursor: pointer;
+				color: $orange-color;
+				transition: 0.1s all;
 			}
 		}
 	}

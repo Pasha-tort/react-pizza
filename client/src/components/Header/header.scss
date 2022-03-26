@@ -1,9 +1,14 @@
 @import '../../scss/variables.scss';
 
 .header {
-	background: #fff;
-	font-family: 'Inter';
 	&__wrapper {
+		background: #fff;
+		font-family: 'Inter';
 		border-bottom: 1px solid $grey;
+		&_sticky {
+			position: sticky;
+			top: 0px;
+			z-index: 15;
+		}
 	}
 }

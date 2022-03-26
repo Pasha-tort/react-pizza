@@ -3,6 +3,7 @@ import React, { FC, useEffect, useState } from 'react';
 //components
 import { GridProducts } from '../GridProducts';
 import { Card } from '../Cards';
+import { SpinnerHorizontal } from '../Spinner';
 
 //hooks
 import { useHttp } from '../../hooks/useHttp';
@@ -21,9 +22,11 @@ import { useCallback } from 'react';
 type PropsSectionProducts = {
 	typeProduct: TypeSectionProduct,
 	number?: number,
+	filters?: boolean,
 }
 
 type TypeProduct = {
+	id: string,
 	imgUrl: string,
 	productName: string,
 	composition: string[],
@@ -32,7 +35,7 @@ type TypeProduct = {
 
 type TypeProducts = TypeProduct[];
 
-export const SectionProducts: FC<PropsSectionProducts> = ({ typeProduct, number }) => {
+export const SectionProducts: FC<PropsSectionProducts> = ({ typeProduct, number, filters = true }) => {
 
 	const [productsList, setProductsList] = useState<TypeProducts | null>(null!);
 	const { request, loading } = useHttp();
@@ -52,14 +55,6 @@ export const SectionProducts: FC<PropsSectionProducts> = ({ typeProduct, number 
 		requestProducts(typeProduct);
 	}, [requestProducts, typeProduct]);
 
-	const content = loading ? 'loading...' :
-		!productsList ? null :
-			productsList.map((item, i) => {
-				return (
-					<Card key={i} data={item} />
-				)
-			});
-
 	return (
 		<div className='section-products'>
 			<div className='container'>
@@ -67,18 +62,31 @@ export const SectionProducts: FC<PropsSectionProducts> = ({ typeProduct, number 
 					<h2 className='section-products__title'>
 						{title}
 					</h2>
-
-					<button className='section-products__filters-btn'>
-						<img className='section-products__filters-icon' src={filtersIcon} alt="filters" />
-						Фильтры
-					</button>
+					{
+						filters ?
+							<button className='section-products__filters-btn'>
+								<img className='section-products__filters-icon' src={filtersIcon} alt="filters" />
+								Фильтры
+							</button>
+							:
+							null
+					}
 				</div>
 
-				<GridProducts>
-					{
-						content
-					}
-				</GridProducts>
+				{
+					productsList && !loading ?
+						<GridProducts>
+							{
+								productsList.map((item, i) => {
+									return (
+										<Card key={i} data={item} />
+									)
+								})
+							}
+						</GridProducts>
+						:
+						<SpinnerHorizontal />
+				}
 			</div>
 		</div>
 	)
