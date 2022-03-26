@@ -3,96 +3,112 @@
 	"data": [
 		{
 			"id": 1,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks1.jpg",
 			"productName": "Напитки",
 			"price": 395
 		},
 		{
 			"id": 2,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks2.jpg",
 			"productName": "Напитки",
 			"price": 425
 		},
 		{
 			"id": 3,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks3.jpg",
 			"productName": "Напитки",
 			"price": 425
 		},
 		{
 			"id": 4,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks4.jpg",
 			"productName": "Напитки",
 			"price": 395
 		},
 		{
 			"id": 5,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks1.jpg",
 			"productName": "Напитки",
 			"price": 375
 		},
 		{
 			"id": 6,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks2.jpg",
 			"productName": "Напитки",
 			"price": 350
 		},
 		{
 			"id": 7,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks3.jpg",
 			"productName": "Напитки",
 			"price": 375
 		},
 		{
 			"id": 8,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks4.jpg",
 			"productName": "Напитки",
 			"price": 350
 		},
 		{
 			"id": 9,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks1.jpg",
 			"productName": "Напитки",
 			"price": 350
 		},
 		{
 			"id": 10,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks2.jpg",
 			"productName": "Напитки",
 			"price": 350
 		},
 		{
 			"id": 11,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks3.jpg",
 			"productName": "Напитки",
 			"price": 450
 		},
 		{
 			"id": 12,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks4.jpg",
 			"productName": "Напитки",
 			"price": 425
 		},
 		{
 			"id": 13,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks1.jpg",
 			"productName": "Напитки",
 			"price": 450
 		},
 		{
 			"id": 14,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks2.jpg",
 			"productName": "Напитки",
 			"price": 425
 		},
 		{
 			"id": 15,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks3.jpg",
 			"productName": "Напитки",
 			"price": 300
 		},
 		{
 			"id": 16,
+			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks4.jpg",
 			"productName": "Напитки",
 			"price": 300

@@ -1,5 +1,4 @@
-import { TypesActionsCart } from '../types/typesCart';
-import { TypeCartState, TypesReducerCart } from '../types/typesCart';
+import { TypesActionsCart, TypeCartState, TypesReducerCart } from '../types/typesCart';
 
 const initialState = {
 	cart: []

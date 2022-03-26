@@ -1,0 +1,80 @@
+@import '../../../scss//variables.scss';
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 25;
+	background: rgba(25, 25, 25, 0.4);
+	backdrop-filter: blur(32px);
+	&__wrapper {
+		background: #fff;
+		position: fixed;
+		width: 1070px;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		border-radius: 24px;
+		&_relative {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			padding: 32px 20px 20px 60px;
+			column-gap: 60px;
+		}
+	}
+	&__close {
+		position: absolute;
+		top: 0;
+		right: -62px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__img {
+		width: 100%;
+		display: block;
+	}
+	&__title {
+		font-size: 20px;
+		font-weight: 600;
+	}
+	&__form {
+		&__switch {
+			margin-top: 24px;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&__include {
+		margin-top: 24px;
+		&__list {
+			margin-top: 16px;
+			display: flex;
+			justify-content: space-between;
+		}
+		&__item {
+			display: flex;
+			flex-direction: column;
+			&_active {
+				color: $orange-color;
+			}
+		}
+	}
+	&__footer {
+		margin-top: 24px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__total-price {
+		font-size: 20px;
+		font-weight: 600;
+		color: $orange-color;
+	}
+	&__btn-submit {
+		width: 148px;
+		height: 55px;
+	}
+}

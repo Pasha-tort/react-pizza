@@ -1,6 +1,5 @@
 //types
-import { TypesReducerCart } from '../types/typesCart';
-import {TypeOrderListItem} from '../types/typesCart';
+import { TypesReducerCart, TypeOrderListItem } from '../types/typesCart';
 
 const addToCart = (res: TypeOrderListItem) => {
 	return {
@@ -10,5 +9,5 @@ const addToCart = (res: TypeOrderListItem) => {
 }
 
 export {
-	addToCart
+	addToCart,
 }

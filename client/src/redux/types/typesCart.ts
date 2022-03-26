@@ -1,3 +1,5 @@
+import { CardType } from '../../components/Cards/Card';
+
 //reducer
 export enum TypesReducerCart {
 	addToCart = 'ADD_TO_CART',
@@ -5,16 +7,17 @@ export enum TypesReducerCart {
 
 export type TypeOrderListItem = {
 	id: string,
+	type: CardType,
 	imgUrl: string,
 	productName: string,
 	desc: string,
 	price: number,
 }
 
-export type CartItem = TypeOrderListItem[];
+type Cart = TypeOrderListItem[];
 
 export type TypeCartState = {
-	cart: CartItem | [],
+	cart: Cart | [],
 }
 
 //actions

@@ -18,6 +18,7 @@ import filtersIcon from '../../assets/icons/filters.svg';
 //types
 import { TypeSectionProduct } from './types';
 import { useCallback } from 'react';
+import { CardItem } from '../Cards/Card';
 
 type PropsSectionProducts = {
 	typeProduct: TypeSectionProduct,
@@ -25,19 +26,11 @@ type PropsSectionProducts = {
 	filters?: boolean,
 }
 
-type TypeProduct = {
-	id: string,
-	imgUrl: string,
-	productName: string,
-	composition: string[],
-	price: number | number[],
-}
-
-type TypeProducts = TypeProduct[];
+type TypeProductsList = CardItem[];
 
 export const SectionProducts: FC<PropsSectionProducts> = ({ typeProduct, number, filters = true }) => {
 
-	const [productsList, setProductsList] = useState<TypeProducts | null>(null!);
+	const [productsList, setProductsList] = useState<TypeProductsList | null>(null!);
 	const { request, loading } = useHttp();
 	const [title, setTitle] = useState<string>('');
 

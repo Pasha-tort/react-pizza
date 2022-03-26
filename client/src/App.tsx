@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import { LoyoutMain } from './components/Layouts/LayotMain';
 import { ProductPage } from './pages/ProductPage';
 import { Footer } from './components/Footer';
+import { ModalAddToCart } from './components/Modals/ModalAddToCart/ModalAddToCart';
 
 //pages
 import { HomePage } from './pages/HomePage';
@@ -33,6 +34,7 @@ function App() {
 				</Route>
 			</Routes>
 			<Footer />
+			<ModalAddToCart />
 		</>
 
 	);

@@ -3,96 +3,112 @@
 	"data": [
 		{
 			"id": 1,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks1.jpg",
 			"productName": "Закуски",
 			"price": 395
 		},
 		{
 			"id": 2,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks2.jpg",
 			"productName": "Закуски",
 			"price": 425
 		},
 		{
 			"id": 3,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks3.jpg",
 			"productName": "Закуски",
 			"price": 425
 		},
 		{
 			"id": 4,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks4.jpg",
 			"productName": "Закуски",
 			"price": 395
 		},
 		{
 			"id": 5,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks1.jpg",
 			"productName": "Закуски",
 			"price": 375
 		},
 		{
 			"id": 6,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks2.jpg",
 			"productName": "Закуски",
 			"price": 350
 		},
 		{
 			"id": 7,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks3.jpg",
 			"productName": "Закуски",
 			"price": 375
 		},
 		{
 			"id": 8,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks4.jpg",
 			"productName": "Закуски",
 			"price": 350
 		},
 		{
 			"id": 9,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks1.jpg",
 			"productName": "Закуски",
 			"price": 350
 		},
 		{
 			"id": 10,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks2.jpg",
 			"productName": "Закуски",
 			"price": 350
 		},
 		{
 			"id": 11,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks3.jpg",
 			"productName": "Закуски",
 			"price": 450
 		},
 		{
 			"id": 12,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks4.jpg",
 			"productName": "Закуски",
 			"price": 425
 		},
 		{
 			"id": 13,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks1.jpg",
 			"productName": "Закуски",
 			"price": 450
 		},
 		{
 			"id": 14,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks2.jpg",
 			"productName": "Закуски",
 			"price": 425
 		},
 		{
 			"id": 15,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks3.jpg",
 			"productName": "Закуски",
 			"price": 300
 		},
 		{
 			"id": 16,
+			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks4.jpg",
 			"productName": "Закуски",
 			"price": 300

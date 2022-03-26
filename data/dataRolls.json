@@ -3,6 +3,7 @@
 	"data": [
 		{
 			"id": 1,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls1.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -10,6 +11,7 @@
 		},
 		{
 			"id": 2,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls2.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -17,6 +19,7 @@
 		},
 		{
 			"id": 3,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls3.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -24,6 +27,7 @@
 		},
 		{
 			"id": 4,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls4.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -31,6 +35,7 @@
 		},
 		{
 			"id": 5,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls1.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -38,6 +43,7 @@
 		},
 		{
 			"id": 6,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls2.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -45,6 +51,7 @@
 		},
 		{
 			"id": 7,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls3.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -52,6 +59,7 @@
 		},
 		{
 			"id": 8,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls4.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -59,6 +67,7 @@
 		},
 		{
 			"id": 9,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls1.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -66,6 +75,7 @@
 		},
 		{
 			"id": 10,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls2.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -73,6 +83,7 @@
 		},
 		{
 			"id": 11,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls3.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -80,6 +91,7 @@
 		},
 		{
 			"id": 12,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls4.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -87,6 +99,7 @@
 		},
 		{
 			"id": 13,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls1.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -94,6 +107,7 @@
 		},
 		{
 			"id": 14,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls2.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -101,6 +115,7 @@
 		},
 		{
 			"id": 15,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls3.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
@@ -108,6 +123,7 @@
 		},
 		{
 			"id": 16,
+			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls4.jpg",
 			"productName": "Роллы",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
