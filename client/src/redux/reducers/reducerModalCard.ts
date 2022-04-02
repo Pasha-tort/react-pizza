@@ -1,19 +1,11 @@
-import { TypeModaCardState, TypesReducerModalCard, TypesActionsModalCard, TypeModalCardItem } from '../types/typesModalCard'
+import { TypeModaCardState, TypesReducerModalCard, TypesActionsModalCard, isTypeCartItemExtended } from '../types/typesModalCard'
 
 const initialState = {
 	openModalCard: false,
 	dataModalCard: {},
-	includeProducts: []
 }
 
-const isTypeModalCardItem = (data: any): data is TypeModalCardItem => {
-	const {id, imgUrl, productName, price} = data;
-	if (id && imgUrl && productName && price) {
-		return true;
-	} else {
-		return false;
-	}
-}
+
 
 export const reducerModalCard = (state: TypeModaCardState  = initialState, action: TypesActionsModalCard): TypeModaCardState => {
 	switch(action.type) {
@@ -30,22 +22,17 @@ export const reducerModalCard = (state: TypeModaCardState  = initialState, actio
 		case TypesReducerModalCard.defineDataModalCard:
 			return {
 				...state,
-				dataModalCard: action.payload!
+				dataModalCard: action.payload!,
 			}
-		case TypesReducerModalCard.defineIncludeProductsModalCard:
-			if (Array.isArray(action.payload)) {
-				return {
-					...state,
-					includeProducts: [...action.payload],
-				}
-			} else {
-				return state;
-			}
-		case TypesReducerModalCard.setPriceModalCard:
-			const desiredProduct = state.includeProducts.find((item, i) => action.payload === i);
+		case TypesReducerModalCard.setAdditionalPriceModalCard:
+			if (!isTypeCartItemExtended(state.dataModalCard)) return state;
+			const desiredProduct = state.dataModalCard.includeProducts.find((item, i) => action.payload === i);
 			
-			const f = (valueBoolean: boolean, valueTotal: number, valueChanges: number) => {
-				const arr = state.includeProducts.map((item, i) => {
+			const f = (valueBoolean: boolean, valueTotalAdditionalPrice: number, valueChanges: number) => {
+
+				if (!isTypeCartItemExtended(state.dataModalCard)) return state;
+
+				const arr = state.dataModalCard.includeProducts.map((item, i) => {
 					if (i === action.payload) {
 						return {
 							...item,
@@ -59,20 +46,27 @@ export const reducerModalCard = (state: TypeModaCardState  = initialState, actio
 					...state,
 					dataModalCard: {
 						...state.dataModalCard,
-						price:  valueBoolean ? valueTotal + valueChanges : valueTotal - valueChanges,
+						additionalPrice:  valueBoolean ? valueTotalAdditionalPrice + valueChanges : valueTotalAdditionalPrice - valueChanges,
+						includeProducts: [...arr],
+						totalPrice: state.dataModalCard.basePrice + (valueBoolean ? valueTotalAdditionalPrice + valueChanges : valueTotalAdditionalPrice - valueChanges),
 					},
-					includeProducts: [...arr],
 				}
 			}
-			
-			if (isTypeModalCardItem(state.dataModalCard)) {
-				if (!desiredProduct!.active) {
-					return f(true, state.dataModalCard.price, desiredProduct!.price);
-				} else {
-					return f(false, state.dataModalCard.price, desiredProduct!.price);
-				}
+
+			if (!desiredProduct!.active) {
+				return f(true, state.dataModalCard.additionalPrice, desiredProduct!.price);
 			} else {
-				return state;
+				return f(false, state.dataModalCard.additionalPrice, desiredProduct!.price);
+			}
+		case TypesReducerModalCard.setBasePriceModalCard:
+			if (!isTypeCartItemExtended(state.dataModalCard)) return state;
+			return {
+				...state,
+				dataModalCard: {
+					...state.dataModalCard,
+					basePrice: action.payload!,
+					totalPrice: action.payload as number + state.dataModalCard.additionalPrice
+				}
 			}
 		default:
 			return state;

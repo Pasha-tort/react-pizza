@@ -5,113 +5,129 @@
 			"id": 1,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks1.jpg",
-			"productName": "Закуски",
-			"price": 395
+			"productName": "Закуски 1",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 120
 		},
 		{
 			"id": 2,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks2.jpg",
-			"productName": "Закуски",
-			"price": 425
+			"productName": "Закуски 2",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 140
 		},
 		{
 			"id": 3,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks3.jpg",
-			"productName": "Закуски",
-			"price": 425
+			"productName": "Закуски 3",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 150
 		},
 		{
 			"id": 4,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks4.jpg",
-			"productName": "Закуски",
-			"price": 395
+			"productName": "Закуски 4",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 170
 		},
 		{
 			"id": 5,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks1.jpg",
-			"productName": "Закуски",
-			"price": 375
+			"productName": "Закуски 5",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 110
 		},
 		{
 			"id": 6,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks2.jpg",
-			"productName": "Закуски",
-			"price": 350
+			"productName": "Закуски 6",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 130
 		},
 		{
 			"id": 7,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks3.jpg",
-			"productName": "Закуски",
-			"price": 375
+			"productName": "Закуски 7",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 160
 		},
 		{
 			"id": 8,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks4.jpg",
-			"productName": "Закуски",
-			"price": 350
+			"productName": "Закуски 8",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 180
 		},
 		{
 			"id": 9,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks1.jpg",
-			"productName": "Закуски",
-			"price": 350
+			"productName": "Закуски 9",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 170
 		},
 		{
 			"id": 10,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks2.jpg",
-			"productName": "Закуски",
-			"price": 350
+			"productName": "Закуски 10",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 155
 		},
 		{
 			"id": 11,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks3.jpg",
-			"productName": "Закуски",
-			"price": 450
+			"productName": "Закуски 11",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 165
 		},
 		{
 			"id": 12,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks4.jpg",
-			"productName": "Закуски",
-			"price": 425
+			"productName": "Закуски 12",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 140
 		},
 		{
 			"id": 13,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks1.jpg",
-			"productName": "Закуски",
-			"price": 450
+			"productName": "Закуски 13",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 140
 		},
 		{
 			"id": 14,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks2.jpg",
-			"productName": "Закуски",
-			"price": 425
+			"productName": "Закуски 14",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 160
 		},
 		{
 			"id": 15,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks3.jpg",
-			"productName": "Закуски",
-			"price": 300
+			"productName": "Закуски 15",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 155
 		},
 		{
 			"id": 16,
 			"type": "snacks",
 			"imgUrl": "/img/products/snacks/snacks4.jpg",
-			"productName": "Закуски",
-			"price": 300
+			"productName": "Закуски 16",
+			"desc": "Классные закуски, только не к пиву",
+			"price": 180
 		}
 	]
 }

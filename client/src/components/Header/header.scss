@@ -5,6 +5,7 @@
 		background: #fff;
 		font-family: 'Inter';
 		border-bottom: 1px solid $grey;
+		height: $header-height;
 		&_sticky {
 			position: sticky;
 			top: 0px;

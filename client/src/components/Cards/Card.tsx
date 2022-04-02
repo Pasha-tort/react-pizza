@@ -1,18 +1,24 @@
 import React, { FC, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
+
+import '../../typings/uuid.d.ts';
 
 //components
 import { SpinnerCircle } from '../Spinner';
 
 //actions
 import { addToCart } from '../../redux/actions/actionsCart';
-import { openModalCard, defineDataModalCard } from '../../redux/actions/actionsModalCard';
+import { defineDataModalCard } from '../../redux/actions/actionsModalCard';
+import { openModal } from '../../redux/actions/actionsModal';
+import { addMessage } from '../../redux/actions/actionsMessage';
 
 //styles
 import './card.scss';
 
 //types
-import { TypeOrderListItem } from '../../redux/types/typesCart';
+import { CardType, TypeOrderListItem } from '../../redux/types/typesCart';
+import { TypesModal } from '../../redux/types/typesModal';
 
 export type CardItem = {
 	id: string,
@@ -20,16 +26,12 @@ export type CardItem = {
 	imgUrl: string,
 	productName: string,
 	composition?: string[],
+	desc: string,
+	includeComposition?: string[],
 	price: number | number[],
 }
 
-export enum CardType {
-	pizza = 'pizza',
-	rolls = 'rolls',
-	other = 'other',
-}
-
-type typeDataCard = {
+type TypeDataCard = {
 	data: CardItem,
 }
 
@@ -37,7 +39,7 @@ function isArrayPrice(price: any): price is Array<number> {
 	return price.length !== undefined;
 }
 
-export const Card: FC<typeDataCard> = ({ data }) => {
+export const Card: FC<TypeDataCard> = ({ data }) => {
 
 	const [loading, setLoading] = useState<boolean>(true);
 	const dispatch = useDispatch();
@@ -50,22 +52,37 @@ export const Card: FC<typeDataCard> = ({ data }) => {
 		if (dataCard.type === CardType.pizza && Array.isArray(dataCard.price)) {
 			const dataModalCard = {
 				id: dataCard.id,
+				counter: 1,
 				imgUrl: dataCard.imgUrl,
+				type: dataCard.type,
 				productName: dataCard.productName,
-				price: dataCard.price[0],
+				listPrice: dataCard.price,
+				basePrice: dataCard.price[0],
+				totalPrice: dataCard.price[0],
+				additionalPrice: 0,
+				includeProducts: dataCard.includeComposition,
 			}
-			dispatch(openModalCard());
+
+			dispatch(openModal(TypesModal.modalAddToCart));
 			document.querySelector('body')!.classList.add('body-overflow-hidden');
 			dispatch(defineDataModalCard(dataModalCard));
-		} else {
+
+		} else if (!Array.isArray(dataCard.price)) {
 			const dataCartItem: TypeOrderListItem = {
 				id: dataCard.id,
+				counter: 1,
+				desc: dataCard.desc,
 				type: dataCard.type,
 				imgUrl: dataCard.imgUrl,
+				composition: dataCard.composition,
 				productName: dataCard.productName,
-				price: 350,
-				desc: 'desc',
+				totalPrice: dataCard.price,
 			}
+			const message = {
+				text: 'Добавлен в корзину',
+				id: uuid(),
+			}
+			dispatch(addMessage(message))
 			dispatch(addToCart(dataCartItem));
 		}
 
@@ -85,6 +102,9 @@ export const Card: FC<typeDataCard> = ({ data }) => {
 					<span className='card__product-name'>{data.productName}</span>
 					{
 						data.composition ? <span className='card__composition'>{data.composition.join(', ')}</span> : null
+					}
+					{
+						data.desc ? <span className='card__info'>{data.desc}</span> : null
 					}
 					<div className='card__footer'>
 						<button onClick={(e) => onHandlerClickCard(e, data)} className='card__btn btn btn_orange'>Выбрать</button>

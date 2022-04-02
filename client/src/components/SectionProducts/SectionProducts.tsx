@@ -1,4 +1,5 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 //components
 import { GridProducts } from '../GridProducts';
@@ -8,6 +9,10 @@ import { SpinnerHorizontal } from '../Spinner';
 //hooks
 import { useHttp } from '../../hooks/useHttp';
 
+//actions
+import { openModal } from '../../redux/actions/actionsModal';
+import { setFilterData, setTypeFilter } from '../../redux/actions/actionsFilter';
+
 //styles
 import '../../scss/variables.scss';
 import './section-products.scss';
@@ -16,37 +21,72 @@ import './section-products.scss';
 import filtersIcon from '../../assets/icons/filters.svg';
 
 //types
-import { TypeSectionProduct } from './types';
-import { useCallback } from 'react';
+import { R } from '../../redux/reducers/index';
+import { CardType } from '../../redux/types/typesCart';
+import { TypesModal } from '../../redux/types/typesModal';
 import { CardItem } from '../Cards/Card';
 
 type PropsSectionProducts = {
-	typeProduct: TypeSectionProduct,
+	typeProduct: CardType,
 	number?: number,
 	filters?: boolean,
 }
 
 type TypeProductsList = CardItem[];
+type TypeFetched = {
+	data: TypeProductsList,
+	title: string,
+	allComposition?: string[],
+}
 
 export const SectionProducts: FC<PropsSectionProducts> = ({ typeProduct, number, filters = true }) => {
 
 	const [productsList, setProductsList] = useState<TypeProductsList | null>(null!);
-	const { request, loading } = useHttp();
-	const [title, setTitle] = useState<string>('');
+	const [title, setTitle] = useState<string>(null!);
+	const [filterList, setFilterList] = useState<string[]>(null!);
 
-	const requestProducts = useCallback(async (typeProduct: TypeSectionProduct) => {
-		const fetched = await request(`/products/${typeProduct}`);
+	const { activeFilter, typeFilter } = useSelector((state: R) => state.reducerFilter);
+	const { request, loading } = useHttp();
+	const dispatch = useDispatch();
+
+	const requestProducts = useCallback(async (typeProduct: CardType, params: string[] = []) => {
+		let fetched: TypeFetched;
+
+		if (filters) {
+			const query = params.join(',');
+			fetched = await request(`/products/${typeProduct}?filter=${query}`);
+		} else {
+			fetched = await request(`/products/${typeProduct}`);
+		}
+
 		if (number) {
-			setProductsList(fetched.data.splice(0, 8));
+			setProductsList(fetched.data.splice(0, number));
+		} else {
+			setProductsList(fetched.data);
+		}
+		if (fetched.allComposition) {
+			setFilterList(fetched.allComposition);
+			setTypeFilter(CardType[typeProduct]);
 		}
 		setTitle(fetched.title);
-		setProductsList(fetched.data);
-	}, [request, number]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	useEffect(() => {
-		console.log('render')
-		requestProducts(typeProduct);
-	}, [requestProducts, typeProduct]);
+		if (!productsList || !filters || !typeFilter) {
+			requestProducts(typeProduct);
+		} else if (typeProduct === typeFilter && filters) {
+			requestProducts(typeProduct, activeFilter);
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [typeProduct, activeFilter]);
+
+	const handlerOpenModalFilter = () => {
+		document.querySelector('body')!.classList.add('body-overflow-hidden');
+		dispatch(setFilterData(filterList));
+		dispatch(setTypeFilter(typeProduct));
+		dispatch(openModal(TypesModal.modalFilter));
+	}
 
 	return (
 		<div className='section-products'>
@@ -57,7 +97,7 @@ export const SectionProducts: FC<PropsSectionProducts> = ({ typeProduct, number,
 					</h2>
 					{
 						filters ?
-							<button className='section-products__filters-btn'>
+							<button className='section-products__filters-btn' onClick={handlerOpenModalFilter}>
 								<img className='section-products__filters-icon' src={filtersIcon} alt="filters" />
 								Фильтры
 							</button>
@@ -65,9 +105,8 @@ export const SectionProducts: FC<PropsSectionProducts> = ({ typeProduct, number,
 							null
 					}
 				</div>
-
 				{
-					productsList && !loading ?
+					productsList?.length === 0 ? <span>Нет потходящих вариантов</span> : !loading && productsList ?
 						<GridProducts>
 							{
 								productsList.map((item, i) => {

@@ -1,132 +1,153 @@
 {
 	"title": "Роллы",
+	"allComposition": [
+		"Сёмга", "Лосось", "Форель",
+		"Сливочный сыр", "Плавленный сыр",
+		"Огурец", "Имбирь", "Рис"
+	],
 	"data": [
 		{
 			"id": 1,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls1.jpg",
-			"productName": "Роллы",
+			"productName": "Роллы 1",
 			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 395
 		},
 		{
 			"id": 2,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls2.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 2",
+			"composition": ["Сёмга", "Плавленный сыр", "Огурец", "Рис"],
+			"desc": "24 шт.",
 			"price": 425
 		},
 		{
 			"id": 3,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls3.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 3",
+			"composition": ["Лосось", "Сливочный сыр", "Рис", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 425
 		},
 		{
 			"id": 4,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls4.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 4",
+			"composition": ["Сёмга", "Сливочный сыр", "Лосось", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 395
 		},
 		{
 			"id": 5,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls1.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 5",
+			"composition": ["Сёмга", "Сливочный сыр", "Плавленный сыр", "Рис", "Огурец"],
+			"desc": "24 шт.",
 			"price": 375
 		},
 		{
 			"id": 6,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls2.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 6",
+			"composition": ["Лосось", "Сливочный сыр", "Плавленный сыр", "Рис", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 350
 		},
 		{
 			"id": 7,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls3.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 7",
+			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Лосось"],
+			"desc": "24 шт.",
 			"price": 375
 		},
 		{
 			"id": 8,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls4.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 8",
+			"composition": ["Лосось", "Сливочный сыр", "Огурец", "Рис", "Плавленный сыр"],
+			"desc": "24 шт.",
 			"price": 350
 		},
 		{
 			"id": 9,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls1.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 9",
+			"composition": ["Лосоь", "Сливочный сыр", "Огурец", "Сёмга", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 350
 		},
 		{
 			"id": 10,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls2.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 10",
+			"composition": ["Лосось", "Сливочный сыр", "Огурец", "Рис", "Плавленный сыр"],
+			"desc": "24 шт.",
 			"price": 350
 		},
 		{
 			"id": 11,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls3.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 11",
+			"composition": ["Сёмга", "Лосось", "Плавленный сыр", "Огурец", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 450
 		},
 		{
 			"id": 12,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls4.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 12",
+			"composition": ["Сёмга", "Плавленный сыр", "Огурец", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 425
 		},
 		{
 			"id": 13,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls1.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 13",
+			"composition": ["Лосось", "Сливочный сыр", "Огурец", "Рис"],
+			"desc": "24 шт.",
 			"price": 450
 		},
 		{
 			"id": 14,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls2.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 14",
+			"composition": ["Сёмга", "Сливочный сыр", "Плавленный сыр", "Огурец", "Рис", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 425
 		},
 		{
 			"id": 15,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls3.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 15",
+			"composition": ["Лосось", "Сливочный сыр", "Плавленный сыр", "Огурец", "Рис", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 300
 		},
 		{
 			"id": 16,
 			"type": "rolls",
 			"imgUrl": "/img/products/rolls/rolls4.jpg",
-			"productName": "Роллы",
-			"composition": ["Сёмга", "Сливочный сыр", "Огурец", "Рис", "Имбирь"],
+			"productName": "Роллы 16",
+			"composition": ["Лосось", "Сёмга", "Плавленный сыр", "Огурец", "Рис", "Имбирь"],
+			"desc": "24 шт.",
 			"price": 300
 		}
 	]

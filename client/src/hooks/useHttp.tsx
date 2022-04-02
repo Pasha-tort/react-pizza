@@ -5,16 +5,11 @@ export const useHttp = () => {
 	const [error, setError] = useState<boolean | null>(false)
 	const request = useCallback(async (url, method = "get", body = null, mode = 'no-cors', headers = {}) => {
 
-		// const urlPrefix = 'https://localhost:3300'
-
 		setLoading(true)
 		try {
 			if (body) {
 				body = JSON.stringify(body)
 			}
-
-			// headers['Content-Type'] = 'application/json';
-			// headers["Accept"] = "application/json";
 
 			const responce = await fetch(url, { method, body, headers, mode: 'no-cors' });
 			let data = await responce.json();

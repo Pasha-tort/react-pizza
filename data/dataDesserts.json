@@ -5,113 +5,129 @@
 			"id": 1,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts1.jpg",
-			"productName": "Десерты",
-			"price": 395
+			"productName": "Десерт 1",
+			"desc": "Очень вкусный десерт",
+			"price": 150
 		},
 		{
 			"id": 2,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts2.jpg",
-			"productName": "Десерты",
-			"price": 425
+			"productName": "Десерт 2",
+			"desc": "Очень вкусный десерт",
+			"price": 140
 		},
 		{
 			"id": 3,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts3.jpg",
-			"productName": "Десерты",
-			"price": 425
+			"productName": "Десерт 3",
+			"desc": "Очень вкусный десерт",
+			"price": 130
 		},
 		{
 			"id": 4,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts4.jpg",
-			"productName": "Десерты",
-			"price": 395
+			"productName": "Десерт 4",
+			"desc": "Очень вкусный десерт",
+			"price": 175
 		},
 		{
 			"id": 5,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts1.jpg",
-			"productName": "Десерты",
-			"price": 375
+			"productName": "Десерт 5",
+			"desc": "Очень вкусный десерт",
+			"price": 180
 		},
 		{
 			"id": 6,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts2.jpg",
-			"productName": "Десерты",
-			"price": 350
+			"productName": "Десерт 6",
+			"desc": "Очень вкусный десерт",
+			"price": 160
 		},
 		{
 			"id": 7,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts3.jpg",
-			"productName": "Десерты",
-			"price": 375
+			"productName": "Десерт 7",
+			"desc": "Очень вкусный десерт",
+			"price": 99
 		},
 		{
 			"id": 8,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts4.jpg",
-			"productName": "Десерты",
-			"price": 350
+			"productName": "Десерт 8",
+			"desc": "Очень вкусный десерт",
+			"price": 130
 		},
 		{
 			"id": 9,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts1.jpg",
-			"productName": "Десерты",
-			"price": 350
+			"productName": "Десерт 9",
+			"desc": "Очень вкусный десерт",
+			"price": 140
 		},
 		{
 			"id": 10,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts2.jpg",
-			"productName": "Десерты",
-			"price": 350
+			"productName": "Десерт 10",
+			"desc": "Очень вкусный десерт",
+			"price": 155
 		},
 		{
 			"id": 11,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts3.jpg",
-			"productName": "Десерты",
-			"price": 450
+			"productName": "Десерт 11",
+			"desc": "Очень вкусный десерт",
+			"price": 163
 		},
 		{
 			"id": 12,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts4.jpg",
-			"productName": "Десерты",
-			"price": 425
+			"productName": "Десерт 12",
+			"desc": "Очень вкусный десерт",
+			"price": 120
 		},
 		{
 			"id": 13,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts1.jpg",
-			"productName": "Десерты",
-			"price": 450
+			"productName": "Десерт 13",
+			"desc": "Очень вкусный десерт",
+			"price": 199
 		},
 		{
 			"id": 14,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts2.jpg",
-			"productName": "Десерты",
-			"price": 425
+			"productName": "Десерт 14",
+			"desc": "Очень вкусный десерт",
+			"price": 250
 		},
 		{
 			"id": 15,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts3.jpg",
-			"productName": "Десерты",
-			"price": 300
+			"productName": "Десерт 15",
+			"desc": "Очень вкусный десерт",
+			"price": 120
 		},
 		{
 			"id": 16,
 			"type": "desserts",
 			"imgUrl": "/img/products/desserts/desserts4.jpg",
-			"productName": "Десерты",
-			"price": 300
+			"productName": "Десерт 16",
+			"desc": "Очень вкусный десерт",
+			"price": 130
 		}
 	]
 }

@@ -1,132 +1,426 @@
 {
 	"title": "Пицца",
+	"allComposition": [
+		"Курица", "Говядина", "Пепперони", "Свинина", "Ветчина", "Колбаски",
+		"Сыр Моцарелла", "Сыр Чеддер", "Итальянский сыр",
+		"Лук", "Красный лук", "Перец Халапенью", "Сладкий перец", "Зеленый перец", "Чеснок", "Томаты", "Орегано", "Шампиньоны",
+		"Томатный соус", "Сливочный соус"
+	],
 	"data": [
 		{
 			"id": 1,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza1.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 1",
+			"composition": ["Свинина", "Лук", "Перец Хфлфпенью", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [300, 450, 600]
 		},
 		{
 			"id": 2,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza2.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 2",
+			"composition": ["Курица", "Зеленый перец", "Перец Хфлфпенью", "Сыр Чеддер", "Сливочный соус", "Пепперони"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [320, 470, 640]
 		},
 		{
 			"id": 3,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza3.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 3",
+			"composition": ["Говядина", "Лук", "Перец Хфлфпенью", "Итальянский сыр", "Чеснок", "Колбаски", "Зеленый перец"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [320, 440, 650]
 		},
 		{
 			"id": 4,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza4.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 4",
+			"composition": ["Свинина", "Лук", "Зеленый перец", "Сыр Чеддер", "Сливочный соус", "Колбаски", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [340, 480, 630]
 		},
 		{
 			"id": 5,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza1.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 5",
+			"composition": ["Свинина", "Перец Хфлфпенью", "Сыр Чеддер", "Сливочный соус", "Пепперони", "Лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [320, 430, 620]
 		},
 		{
 			"id": 6,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza2.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 6",
+			"composition": ["Пепперони", "Лук", "Зеленый перец", "Сыр Моцарелла", "Томатный соус", "Чеснок", "Сладкий перец"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [300, 450, 600]
 		},
 		{
 			"id": 7,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza3.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 7",
+			"composition": ["Говядина", "Итальянский сыр", "Перец Халапенью", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [300, 450, 600]
 		},
 		{
 			"id": 8,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza4.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 8",
+			"composition": ["Курица", "Лук", "Перец Халапенью", "Сыр Моцарелла", "Сливочный соус", "Колбаски", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [300, 450, 600]
 		},
 		{
 			"id": 9,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza1.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 9",
+			"composition": ["Колбаски", "Лук", "Зеленый перец", "Сыр Чеддер", "Томатный соус", "Говядина", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [340, 480, 660]
 		},
 		{
 			"id": 10,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza2.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 10",
+			"composition": ["Свинина", "Лук", "Чеснок", "Сыр Моцарелла", "Томатный соус", "Томаты", "Орегано"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [300, 450, 600]
 		},
 		{
 			"id": 11,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza3.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 11",
+			"composition": ["Колбаски", "Лук", "Орегано", "Сыр Моцарелла", "Сливочный соус", "Свинина", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [320, 480, 670]
 		},
 		{
 			"id": 12,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza4.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 12",
+			"composition": ["Курица", "Лук", "Перец Хфлфпенью", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [300, 450, 600]
 		},
 		{
 			"id": 13,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza1.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 13",
+			"composition": ["Курица", "Лук", "Перец Хфлфпенью", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [300, 450, 600]
 		},
 		{
 			"id": 14,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza2.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 14",
+			"composition": ["Пепперони", "Лук", "Томаты", "Сыр Чеддер", "Сливочный соус", "Ветчина", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [320, 430, 620]
 		},
 		{
 			"id": 15,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza3.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 15",
+			"composition": ["Курица", "Лук", "Перец Хфлфпенью", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [300, 450, 600]
 		},
 		{
 			"id": 16,
 			"type": "pizza",
 			"imgUrl": "/img/products/pizza/pizza4.jpg",
-			"productName": "Пицца",
-			"composition": ["Курица", "Лук", "Перец Халапеньо", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"productName": "Пицца 16",
+			"composition": ["Курица", "Лук", "Перец Хфлфпенью", "Сыр Моцарелла", "Томатный соус", "Ветчина", "Красный лук"],
+			"includeComposition": [
+				{
+					"productName": "Моцарелла",
+					"price": 59
+				},
+				{
+					"productName": "Шампиньоны",
+					"price": 49
+				},
+				{
+					"productName": "Красный лук",
+					"price": 39
+				},
+				{
+					"productName": "Сладкий перец",
+					"price": 59
+				}
+			],
 			"price": [330, 480, 620]
 		}
 	]

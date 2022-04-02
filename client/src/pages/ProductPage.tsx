@@ -4,10 +4,10 @@ import React, { FC, useEffect } from 'react';
 import { SectionProducts } from '../components/SectionProducts';
 
 //types
-import { TypeSectionProduct } from '../components/SectionProducts/types';
+import { CardType } from '../redux/types/typesCart';
 
 type PropsProductPage = {
-	typeProduct: TypeSectionProduct
+	typeProduct: CardType
 }
 
 export const ProductPage: FC<PropsProductPage> = ({ typeProduct }) => {

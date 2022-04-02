@@ -1,0 +1,32 @@
+@import '../../scss/variables.scss';
+
+.counter {
+	height: 36px;
+	width: 92px;
+	background: $soft-orange;
+	display: grid;
+	border-radius: 6px;
+	color: $orange-color;
+	grid-template-columns: repeat(3 , 1fr);
+	align-items: center;
+	overflow: hidden;
+	&__count {
+		display: flex;
+		justify-content: center;
+	}
+	&__btn {
+		height: 100%;
+		border: 0px;
+		background: transparent;
+		color: $orange-color;
+		transition: 0.1s all;
+		font-size: 20px;
+		font-weight: 400;
+		&:hover {
+			cursor: pointer;
+			background: $orange-color;
+			color: #fff;
+			transition: 0.1s all;
+		}
+	}
+}

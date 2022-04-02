@@ -26,13 +26,59 @@ enum TypeDataFile {
 	saucess = 'dataSaucess.json',
 }
 
-async function readJSONFile(dataFile: TypeDataFile) {
+async function readJSONFile(dataFile: TypeDataFile): Promise<string> {
 	return new Promise((res, rej) => {
 		fs.readFile(path.join(pathData, dataFile), 'utf-8', (err, data) => {
 			if (err) rej();
 			res(data);
-		})
-	})
+		});
+	});
+}
+
+function filtration(filterActive: string, data: string) {
+	const arrFilterActive = filterActive.split(',');
+	const dataObj: DataFile = JSON.parse(data);
+
+	const newProductList = dataObj.data.filter(item => {
+		let result = true;
+		const objResemblance: TypeObjResemblance = {};
+		
+		for(let i = 0; i < arrFilterActive.length; i++) {
+			const currentFilter = arrFilterActive[i];
+			objResemblance[currentFilter] = false;
+
+			item.composition.forEach(item => {
+				if (item === currentFilter) {
+					objResemblance[currentFilter] = true;
+				}
+			});
+		}
+		
+		const arrResult = Object.values(objResemblance);
+		for(let i = 0; i < arrResult.length; i++) {
+			if (arrResult[i] === false) {
+				result = false;
+				break;
+			}
+			continue;
+		}
+
+		return result;
+	});
+
+	dataObj.data = newProductList;
+	return JSON.stringify(dataObj);
+}
+
+type TypeItem = {
+	composition: string[],
+}
+type TypeJsonFile = string;
+type DataFile = {
+	data: TypeItem[],
+}
+type TypeObjResemblance = {
+	[id: string]: boolean;
 }
 
 @controller('/products')
@@ -42,16 +88,27 @@ class productsController {
 	async getProduct(req: Request, res: Response) {
 		try {
 			const {typeProduct} = req.params;
-			let products;
+			const filterActive = req.query.filter as string;
+			let products: string;
+			let data: TypeJsonFile;
 
 			switch (typeProduct) {
 
 				case TypeProducts.pizza:
-					products = await readJSONFile(TypeDataFile.pizza);
+					data = await readJSONFile(TypeDataFile.pizza);
+					if (!filterActive) {
+						products = data;
+					} else {
+						products = filtration(filterActive, data);
+					}
 					break;
-
 				case TypeProducts.rolls:
-					products = await readJSONFile(TypeDataFile.rolls);
+					data = await readJSONFile(TypeDataFile.rolls);
+					if (!filterActive) {
+						products = data;
+					} else {
+						products = filtration(filterActive, data);
+					}
 					break;
 
 				case TypeProducts.snacks:

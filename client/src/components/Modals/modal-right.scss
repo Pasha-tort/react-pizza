@@ -1,0 +1,19 @@
+.modal-right {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 40px;
+	}
+	&__title {
+		font-size: 32px;
+		font-weight: 600;
+	}
+	&__close {
+		width: 24px;
+		height: 24px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

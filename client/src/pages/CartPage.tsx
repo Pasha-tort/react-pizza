@@ -2,7 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 //components
-import { OrderList, OrderListItem, OrderAdd, OrderInfo } from '../components/Cart';
+import { OrderList, OrderListItem } from '../components/Cart';
+
+//style
+import '../components/Cart/order.scss';
 
 //types
 import { R } from '../redux/reducers';
@@ -12,17 +15,18 @@ export const CartPage = () => {
 	const { cart } = useSelector((state: R) => state.reducerCart);
 
 	return (
-		<>
-			<OrderList>
-				{
-					cart.map(item => {
-						return <OrderListItem data={item} />
-					})
-				}
-			</OrderList>
-			<OrderAdd />
-			<OrderAdd />
-			<OrderInfo />
-		</>
+		<div className='order'>
+			{
+				cart.length === 0 ? <span className='order__empty-cart'>Корзина Пуста</span>
+					:
+					<OrderList>
+						{
+							cart.map(item => {
+								return <OrderListItem key={item.type + item.id} data={item} />
+							})
+						}
+					</OrderList>
+			}
+		</div>
 	)
 }

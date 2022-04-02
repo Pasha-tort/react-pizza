@@ -1,116 +1,132 @@
 {
-	"title": "Напитки",
+	"title": "Напиток",
 	"data": [
 		{
 			"id": 1,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks1.jpg",
-			"productName": "Напитки",
-			"price": 395
+			"productName": "Напиток 16",
+			"desc": "0,3 Л",
+			"price": 99
 		},
 		{
 			"id": 2,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks2.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 15",
+			"desc": "0,3 Л",
 			"price": 425
 		},
 		{
 			"id": 3,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks3.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 14",
+			"desc": "0,3 Л",
 			"price": 425
 		},
 		{
 			"id": 4,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks4.jpg",
-			"productName": "Напитки",
-			"price": 395
+			"productName": "Напиток 13",
+			"desc": "0,3 Л",
+			"price": 99
 		},
 		{
 			"id": 5,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks1.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 12",
+			"desc": "0,3 Л",
 			"price": 375
 		},
 		{
 			"id": 6,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks2.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 11",
+			"desc": "0,3 Л",
 			"price": 350
 		},
 		{
 			"id": 7,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks3.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 10",
+			"desc": "0,3 Л",
 			"price": 375
 		},
 		{
 			"id": 8,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks4.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 1",
+			"desc": "0,3 Л",
 			"price": 350
 		},
 		{
 			"id": 9,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks1.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 2",
+			"desc": "0,3 Л",
 			"price": 350
 		},
 		{
 			"id": 10,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks2.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 3",
+			"desc": "0,3 Л",
 			"price": 350
 		},
 		{
 			"id": 11,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks3.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 4",
+			"desc": "0,3 Л",
 			"price": 450
 		},
 		{
 			"id": 12,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks4.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 5",
+			"desc": "0,3 Л",
 			"price": 425
 		},
 		{
 			"id": 13,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks1.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 6",
+			"desc": "0,3 Л",
 			"price": 450
 		},
 		{
 			"id": 14,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks2.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 7",
+			"desc": "0,3 Л",
 			"price": 425
 		},
 		{
 			"id": 15,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks3.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 8",
+			"desc": "0,3 Л",
 			"price": 300
 		},
 		{
 			"id": 16,
 			"type": "drinks",
 			"imgUrl": "/img/products/drinks/drinks4.jpg",
-			"productName": "Напитки",
+			"productName": "Напиток 9",
+			"desc": "0,3 Л",
 			"price": 300
 		}
 	]

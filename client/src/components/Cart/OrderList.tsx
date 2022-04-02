@@ -1,5 +1,7 @@
 import React, { FC, useEffect } from 'react';
 
+import { OrderForm } from './';
+
 //types
 type PropsOrderList = {
 	children: React.ReactNode
@@ -21,6 +23,7 @@ export const OrderList: FC<PropsOrderList> = ({ children }) => {
 					children
 				}
 			</ul>
+			<OrderForm />
 		</>
 	)
 }

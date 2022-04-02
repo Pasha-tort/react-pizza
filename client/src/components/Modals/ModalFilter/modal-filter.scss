@@ -1,0 +1,66 @@
+@import '../../../scss/variables.scss'; 
+
+.modal-filter {
+	&__wrapper {
+		background: #fff;
+		position: fixed;
+		display: grid;
+		padding-top: 32px;
+		grid-template-rows: 40px auto 72px;
+		width: 520px;
+		height: 100vh;
+		top: 0;
+		right: 0;
+	}
+	&__list {
+		margin-top: 25px;
+		display: flex;
+		align-content: flex-start;
+		flex-wrap: wrap;
+		padding: 0 40px;
+		&__item {
+			&__wrapper {
+				input {
+					display: none;
+				}
+			}
+			margin-left: 8px;
+			margin-bottom: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0px 16px;
+			height: 40px;
+			align-items: center;
+			list-style-type: none;
+			font-size: 14px;
+			font-weight: 400;
+			color: #000;
+			border: 1px solid $grey;
+			border-radius: 6px;
+			transition: 0.1s all;
+			&:hover {
+				cursor: pointer;
+				background: $orange-color;
+				color: #fff;
+				border: 1px solid $orange-color;
+				transition: 0.1s all;
+			}
+			&_active {
+				background: $orange-color;
+				color: #fff;
+				border: 1px solid $orange-color;
+				transition: 0.1s all;
+			}
+		}
+	}
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 12px 20px;
+	}
+	&__btn {
+		width: 230px;
+		height: 48px;
+	}
+}

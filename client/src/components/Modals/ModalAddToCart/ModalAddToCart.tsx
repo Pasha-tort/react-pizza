@@ -1,149 +1,146 @@
-import React, { FC, useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
+import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
 
 //styles
 import './modal-add-to-cart.scss';
+
+//components
+import { ModalSwitchBlocks } from './ModalSwitchBlocks';
+import { ModalIncludeProducts } from './ModalIncludeProducts';
+import { SpinnerCircle } from '../../Spinner';
 
 //icons
 import closeIcon from '../../../assets/icons/closeModalCard.svg';
 
 //actions
-import { defineIncludeProductsModalCard, setPriceModalCard, closeModalCard, defineDataModalCard } from '../../../redux/actions/actionsModalCard';
+import { addToCart } from '../../../redux/actions/actionsCart';
+import { setAdditionalPriceModalCard, defineDataModalCard, setBasePriceModalCard } from '../../../redux/actions/actionsModalCard';
+import { closeModal } from '../../../redux/actions/actionsModal';
+import { addMessage } from '../../../redux/actions/actionsMessage';
 
 //types
+import { TypesInputs } from '../../../redux/types/typesModalCard';
 import { R } from '../../../redux/reducers';
-import { CardItem } from '../../Cards/Card';
+import { isTypeCartItemExtended, TypeCartItemExtended } from '../../../redux/types/typesModalCard';
+import { TypeHandlerCloseModal } from '../Modal';
 
-const includeComposition = [
-	{
-		productName: 'Моцарелла',
-		price: 59,
-	},
-	{
-		productName: 'Шампиньоны',
-		price: 49,
-	},
-	{
-		productName: 'Красный лук',
-		price: 39,
-	},
-	{
-		productName: 'Сладкий перец',
-		price: 59,
-	},
-]
+export type TypeHandlerClickIncludeItem = (e: React.MouseEvent<HTMLInputElement>, index: number) => void;
+export type TypeHandlerChangeRadioInput = (e: React.FormEvent<HTMLInputElement>) => void;
 
-export const ModalAddToCart: FC = () => {
+type PropsModal = {
+	handlerClose: TypeHandlerCloseModal,
+}
 
-	const isModalCard = (data: any): data is CardItem => {
-		const { id, imgUrl, productName, price } = data;
-		if (id && imgUrl && productName && price) {
-			return true
-		} else {
-			return false
-		}
-	}
+export const ModalAddToCart: FC<PropsModal> = ({ handlerClose }) => {
 
 	const dispatch = useDispatch();
-	const { dataModalCard, includeProducts, openModalCard } = useSelector((state: R) => state.reducerModalCard);
-	const imgRef = useRef<HTMLImageElement>(null!);
-	const modalRef = useRef<HTMLDivElement>(null!);
+	const { dataModalCard } = useSelector((state: R) => state.reducerModalCard);
+	const closeRef = useRef<HTMLImageElement>(null!);
+	const formRef = useRef<HTMLFormElement>(null!);
+	const [loading, setLoading] = useState<boolean>(true);
 
 	useEffect(() => {
+		return () => { }
+	}, [loading]);
 
-		if (openModalCard) {
-			dispatch(defineIncludeProductsModalCard(includeComposition));
-		}
-
-		return () => {
-			document.querySelector('body')!.classList.remove('body-overflow-hidden');
-		}
-	}, [openModalCard]);
-
-	const handlerClickIncludeItem = (e: React.MouseEvent<HTMLInputElement>, index: number) => {
-		dispatch(setPriceModalCard(index));
+	const loadImg = () => {
+		setLoading(false);
 	}
 
-	const handlerCloseModalCard = (e: React.MouseEvent<HTMLImageElement | HTMLDivElement>) => {
-		if (e.target === modalRef.current || e.target === imgRef.current) {
-			dispatch(closeModalCard());
-			dispatch(defineDataModalCard({}));
-			dispatch(defineIncludeProductsModalCard([]));
+	const handlerClickIncludeItem: TypeHandlerClickIncludeItem = useCallback((e: React.MouseEvent<HTMLInputElement>, index: number) => {
+		dispatch(setAdditionalPriceModalCard(index));
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
+	const handlerSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const formData = new FormData(formRef.current);
+		const typeDough = formData.get('typeDough');
+		const radius = formData.get('radius');
+		const newDataModalCard = {
+			...dataModalCard as TypeCartItemExtended,
+			typeDough: typeDough as string,
+			radius: radius as string,
 		}
+		const message = {
+			text: 'Добавлено в корзину',
+			id: uuid(),
+		}
+		dispatch(defineDataModalCard(newDataModalCard))
+		dispatch(addToCart(newDataModalCard));
+		dispatch(addMessage(message));
+		dispatch(closeModal());
+		dispatch(defineDataModalCard({}));
+		document.querySelector('body')!.classList.remove('body-overflow-hidden');
 	}
 
-	if (!openModalCard) return null;
-	if (!isModalCard(dataModalCard)) return null;
+	const handlerChangeRadioInput: TypeHandlerChangeRadioInput = useCallback((e: React.FormEvent<HTMLInputElement>) => {
+		const input = e.target as HTMLInputElement;
+		const parent = input.parentElement! as HTMLElement;
+		const toggle = parent.querySelector('.modal__toggle')! as HTMLElement;
+		const allInputCurrentType = document.querySelectorAll(`[data-type="${input.dataset['type']}"]`);
 
-	const { imgUrl, productName, price } = dataModalCard;
+		allInputCurrentType.forEach((item, i, arr) => {
+			item.previousElementSibling!.classList.remove('modal__switch__item_active');
+			if (item === e.target) {
+				const widthParent = +window.getComputedStyle(parent).width.match(/\d+/g)![0];
+				toggle.style.left = `${widthParent / arr.length * i}px`;
 
-	return ReactDOM.createPortal(
-		<div ref={modalRef} className='modal' onClick={handlerCloseModalCard}>
-			<div className='modal__wrapper'>
-				<div className='modal__wrapper_relative'>
-					<img ref={imgRef} className='modal__close' src={closeIcon} alt='close' />
-					<img className='modal__img' src={imgUrl} alt={productName} />
-					<div className='modal__info'>
-						<h3 className='modal__title'>
-							{productName}
-						</h3>
-						<form className='modal__form'>
+				if (input.dataset['type'] === TypesInputs.radius) {
+					if (!isTypeCartItemExtended(dataModalCard)) return false
+					const basePrice = dataModalCard.listPrice[i];
+					dispatch(setBasePriceModalCard(basePrice));
+				}
+			}
+		});
 
-							<div className='modal__form__switch'>
-								<label htmlFor="typeDough1">Традиционное</label>
-								<input type="radio" value="традиционное" name="typeDough" id="typeDough1" />
+		const label = input.previousElementSibling!;
+		label.classList.add('modal__switch__item_active')
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [dataModalCard]);
 
-								<label htmlFor="typeDough1">Тоноке</label>
-								<input type="radio" value="тонкое" name="typeDough" id="typeDough2" />
+	if (!isTypeCartItemExtended(dataModalCard)) return null;
+
+	const { imgUrl, productName, includeProducts, totalPrice, counter } = dataModalCard;
+
+	return (
+		<div className='modal__wrapper'>
+			<div className='modal__wrapper_relative'>
+				<img ref={closeRef} className='modal__close' src={closeIcon} alt='close' onClick={(e) => handlerClose(e, closeRef.current)} />
+				<div className='modal__img__wrapper'>
+					<img onLoad={loadImg} className='modal__img' src={imgUrl} alt={productName} />
+					<SpinnerCircle loading={loading} />
+				</div>
+				<div className='modal__info'>
+					<h3 className='modal__title'>
+						{productName}
+					</h3>
+					<form ref={formRef} id="form-modal" className='modal__form' onSubmit={handlerSubmit}>
+
+						<ModalSwitchBlocks handlerChangeRadioInput={handlerChangeRadioInput} />
+
+						<div className='modal__include'>
+							<span className='modal__include__title'>
+								Добавьте в пиццу
+							</span>
+
+							<ul className='modal__include__list'>
+								<ModalIncludeProducts includeProducts={includeProducts} handler={handlerClickIncludeItem} />
+							</ul>
+						</div>
+
+						<div className='modal__footer'>
+							<div className='modal__total-price'>
+								Итого {totalPrice * counter} ₽
 							</div>
+							<button className='modal__btn-submit btn btn_orange' >Добавить</button>
+						</div>
+					</form>
 
-							<div className='modal__form__switch'>
-								<label htmlFor="radius1">20 см</label>
-								<input type="radio" name="radius" id="radius1" />
-
-								<label htmlFor="radius2">28 см</label>
-								<input type="radio" name="radius" id="radius2" />
-
-								<label htmlFor="radius3">33 см</label>
-								<input type="radio" name="radius" id="radius3" />
-							</div>
-
-							<div className='modal__include'>
-								<span className='modal__include__title'>
-									Добавьте в пиццу
-								</span>
-								<ul className='modal__include__list'>
-									{
-										includeProducts.map((item, i) => {
-											const classNameItem = item.active ? 'modal__include__item modal__include__item_active' : 'modal__include__item';
-											return (
-												<li key={item.productName} className={classNameItem} >
-													<label className='modal__include__item__img'>
-														<img />
-													</label>
-													<input type="checkbox" id="checbox1" onClick={(e) => handlerClickIncludeItem(e, i)} />
-													<span className='modal__include__item__name'>{item.productName}</span>
-													<span className='modal__inclide__item__price'>{item.price} ₽</span>
-												</li>
-											)
-										})
-									}
-								</ul>
-							</div>
-
-							<div className='modal__footer'>
-								<div className='modal__total-price'>
-									Итого {price} ₽
-								</div>
-								<button className='modal__btn-submit btn btn_orange'>Добавить</button>
-							</div>
-						</form>
-					</div>
 				</div>
 			</div>
 		</div>
-		, document.getElementById('root')!
 	)
 
 }

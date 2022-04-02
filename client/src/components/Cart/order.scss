@@ -1,0 +1,91 @@
+@import '../../scss/variables.scss';
+
+.order {
+	width: 850px;
+	min-height: calc(100vh - $footer-height - $header-height - $footer-top);
+	margin: 40px auto 0 auto;
+	&__title {
+		font-size: 40px;
+		font-weight: 600;
+	}
+	&__list {
+		margin-top: 24px;
+	}
+	&__item {
+		padding: 16px 24px 16px 16px;
+		list-style-type: none;
+		margin-top: 16px;
+		background: #fff;
+		border-radius: 12px;
+		display: grid;
+		align-items: center;
+		grid-template-columns: 120px 1fr 92px 92px;
+		&:first-child {
+			margin-top: 0px;
+		}
+		&__img {
+			width: 120px;
+			height: 120px;
+		}
+		&__name {
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 8px;
+		}
+		&__desc {
+			font-size: 16px;
+			font-weight: 400;
+			margin-top: 8px;
+			&__wrapper {
+				margin-left: 16px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+		&__price {
+			font-size: 20px;
+			font-weight: 600;
+			color: $orange-color;
+			justify-self: center;
+		}
+	}
+	&__composition {
+		&__list {
+			display: flex;
+		}
+		&__item {
+			list-style-type: none;
+		}
+	}
+	&__empty-cart {
+		margin-top: 20px;
+		font-size: 20px;
+		font-weight: 400;
+	}
+}
+
+.order-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	&__item {
+		margin-top: 15px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__input {
+		height: 30px;
+		width: 200px;
+		border: 1px solid $grey;
+	}
+	&__error {
+		color: red;
+	}
+	&__btn {
+		margin-top: 15px;
+		width: 150px;
+		height: 48px;
+	}
+}

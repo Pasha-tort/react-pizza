@@ -1,117 +1,133 @@
 {
-	"title": "Соусы",
+	"title": "Соус",
 	"data": [
 		{
 			"id": 1,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess1.jpg",
-			"productName": "Соусы",
-			"price": 395
+			"productName": "Соус 1",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 2,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess2.jpg",
-			"productName": "Соусы",
-			"price": 425
+			"productName": "Соус 2",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 3,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess3.jpg",
-			"productName": "Соусы",
-			"price": 425
+			"productName": "Соус 3",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 4,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess4.jpg",
-			"productName": "Соусы",
-			"price": 395
+			"productName": "Соус 4",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 5,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess1.jpg",
-			"productName": "Соусы",
-			"price": 375
+			"productName": "Соус 5",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 6,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess2.jpg",
-			"productName": "Соусы",
-			"price": 350
+			"productName": "Соус 6",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 7,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess3.jpg",
-			"productName": "Соусы",
-			"price": 375
+			"productName": "Соус 7",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 8,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess4.jpg",
-			"productName": "Соусы",
-			"price": 350
+			"productName": "Соус 8",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 9,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess1.jpg",
-			"productName": "Соусы",
-			"price": 350
+			"productName": "Соус 9",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 10,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess2.jpg",
-			"productName": "Соусы",
-			"price": 350
+			"productName": "Соус 10",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 11,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess3.jpg",
-			"productName": "Соусы",
-			"price": 450
+			"productName": "Соус 11",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 12,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess4.jpg",
-			"productName": "Соусы",
-			"price": 425
+			"productName": "Соус 12",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 13,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess1.jpg",
-			"productName": "Соусы",
-			"price": 450
+			"productName": "Соус 13",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 14,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess2.jpg",
-			"productName": "Соусы",
-			"price": 425
+			"productName": "Соус 14",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 15,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess3.jpg",
-			"productName": "Соусы",
-			"price": 300
+			"productName": "Соус 15",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		},
 		{
 			"id": 16,
 			"type": "saucess",
 			"imgUrl": "/img/products/saucess/saucess4.jpg",
-			"productName": "Соусы",
-			"price": 300
+			"productName": "Соус 16",
+			"desc": "Очень вкусный соус",
+			"price": 99
 		}
 	]
 }

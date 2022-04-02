@@ -1,4 +1,4 @@
-import { TypesReducerModalCard, TypeModalCardItem, TypeIncludeProducts } from '../types/typesModalCard'
+import { TypesReducerModalCard, TypeCartItemExtended} from '../types/typesModalCard'
 
 const openModalCard = () => {
 	return {
@@ -12,31 +12,33 @@ const closeModalCard = () => {
 	}
 }
 
-const defineDataModalCard = (res: TypeModalCardItem | {}) => {
+const defineDataModalCard = (res: TypeCartItemExtended | {}) => {
 	return {
 		type: TypesReducerModalCard.defineDataModalCard,
 		payload: res,
 	}
 }
 
-const defineIncludeProductsModalCard = (res: TypeIncludeProducts) => {
+const setAdditionalPriceModalCard = (res: number) => {
 	return {
-		type: TypesReducerModalCard.defineIncludeProductsModalCard,
+		type: TypesReducerModalCard.setAdditionalPriceModalCard,
 		payload: res,
 	}
 }
 
-const setPriceModalCard = (res: number) => {
+const setBasePriceModalCard = (res: number) => {
 	return {
-		type: TypesReducerModalCard.setPriceModalCard,
+		type: TypesReducerModalCard.setBasePriceModalCard,
 		payload: res,
 	}
 }
+
+
 
 export {
 	openModalCard,
 	closeModalCard,
 	defineDataModalCard,
-	defineIncludeProductsModalCard,
-	setPriceModalCard,
+	setAdditionalPriceModalCard,
+	setBasePriceModalCard,
 }

@@ -2,7 +2,7 @@
 
 .header-menu {
 	display: grid;
-	grid-template-columns: 141px 1fr 89px;
+	grid-template-columns: 141px 1fr auto;
 	min-height: 64px;
 	align-items: center;
 	&__logo-wrapper {
@@ -21,6 +21,7 @@
 	&__cart-btn {
 		height: 40px;
 		min-width: 89px;
+		padding: 5px;
 		border: 0px;
 		background: $orange-color;
 		border-radius: 4px;
@@ -32,6 +33,7 @@
 		align-items: center;
 		justify-content: center;
 		transition: 0.2s all;
+		text-decoration: none;
 		&__icon {
 			margin-right: 8px;
 		}
